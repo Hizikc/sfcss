@@ -1,0 +1,66 @@
+/* Подложка обратной связи */
+.contacts-grid {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  max-width: 400px !important; /* Умеренная ширина всей подложки */
+  width: 100% !important;
+  margin: 50px auto 0 auto !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+/* Заголовок */
+.contacts-grid h3 {
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 24px 0 !important;
+  font-family: sans-serif !important;
+}
+
+/* Контейнер кнопок — строим жесткую сетку из 2 колонок */
+.contacts-grid .buttons_flex {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* Ровно два одинаковых столбца */
+  gap: 16px !important;                      /* Отступы между кнопками со всех сторон */
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Общие стили для кнопок-ссылок */
+.contacts-grid .btn-contact {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 12px 0 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  font-family: sans-serif !important;
+  box-sizing: border-box !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* Подсветка кнопок при наведении мыши */
+.contacts-grid .btn-contact:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Магия для третьей кнопки: растягиваем её на оба столбца в нижнем ряду */
+.contacts-grid .buttons_flex .btn-contact:nth-child(3) {
+  grid-column: span 2 !important; /* Занимает 2 колонки из 2 доступных */
+}
+.contacts-grid .btn-contact {
+  /* ... все твои старые свойства (display, width, background и т.д.) ... */
+
+  font-weight: 700 !important; /* Вот это свойство сделает текст жирным */
+}

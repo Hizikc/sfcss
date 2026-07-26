@@ -1,0 +1,65 @@
+@import 'header.css';
+@import 'hero.css';
+@import 'footer.css';
+@import 'feedback.css';
+@import 'card.css';
+@import 'links.css';
+@import 'lesson.css';
+@import 'lesson-single.css';
+
+/* Цвет выделения для всего сайта */
+::selection {
+  background-color: rgba(168, 85, 247, 0.4); /* Полупрозрачный фиолетовый фон */
+  color: #ffffff; /* Цвет самого текста при выделении */
+}
+
+/* Фикс для браузеров на старых движках (на всякий случай) */
+::-moz-selection {
+  background-color: rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+html, body {
+    /* Создает круглый градиент из самого центра экрана */
+    background: radial-gradient(circle at center, #6366f1 0%, #000000 125%) !important;/* цвета первый тот что в центе второй то что с краёв
+
+    color: #ffffff;           /* Белый цвет для текста */
+    margin: 0;                 /* Убираем рамки по краям */
+    padding: 0;
+    min-height: 100vh;         /* Растягиваем фон на весь экран */
+}
+
+/* Подключение шрифта */
+body, a, button {
+  font-family: 'Inter Tight', sans-serif !important;
+}
+
+
+
+
+/* Точка у курсора */
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.cursor-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #8A2BE2; /* Здесь можно задать любой цвет точки */
+  border-radius: 50%; /* Делает квадрат круглым */
+  position: fixed;
+  pointer-events: none; /* Чтобы точка не мешала кликать по элементам сайта */
+  z-index: 9999; /* Чтобы точка была поверх всех элементов */
+  transform: translate(-50%, -50%); /* Центрирует точку точно под острием курсора */
+  transition: transform 0.05s ease-out; /* Добавляет небольшую плавность хода */
+}

@@ -1,0 +1,229 @@
+/* Базовое выравнивание всей секции */
+.new-projects-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.new-projects-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.new-projects-subtitle {
+  color: #8b8ea8;
+  font-size: 1rem;
+  margin-bottom: 48px;
+}
+
+/* Контейнер: ставит карточки в ряд по центру и толкает футер вниз */
+.new-projects-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 80px; /* Этот отступ решает проблему — блоки внизу больше не залезут под карточки */
+}
+
+/* Оригинальный дизайн карточки со скрина */
+.new-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 320px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.new-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Неоновый зеленый бейдж */
+.new-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.15);
+}
+
+.new-card-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.new-card-text {
+  color: #9aa0b7;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  flex-grow: 1; /* Оставляет кнопку всегда внизу, если текст разный */
+}
+
+/* Кнопка-рамка из твоего дизайна */
+.new-card-btn {
+  display: block;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px 0;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.new-card-btn:hover {
+  background: rgba(46, 204, 113, 0.08);
+  border-color: rgba(46, 204, 113, 0.4);
+}
+
+
+/* система конфигов */
+.config-system {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 30px auto;
+}
+.config-desc {
+  font-size: 0.85rem;
+  color: #8b8ea8;
+  margin-bottom: 15px;
+}
+.config-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn-export, .btn-import-label {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-export:hover, .btn-import-label:hover {
+  background: #2c2b36;
+  border-color: #ffffff;
+}
+.lessons-body {
+  margin: 0;
+  background-color: #0b0b1e;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.lessons-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px; /* Большой верхний отступ, чтобы шапка не перекрывала */
+}
+
+.lessons-main-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #a855f7 100%);
+  -webkit-text-fill-color: transparent;
+}
+
+/* Сетка карточек */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Стеклянные карточки в твоем стиле */
+.lesson-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+}
+
+.lesson-num {
+  font-size: 5.5rem; /* Сделали еще крупнее */
+  font-weight: 900;
+
+  /* Делаем полупрозрачный фиолетовый текст ярче: */
+  color: rgba(168, 85, 247, 0.25);
+
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  z-index: 0; /* Уводим на самый задний план внутри карточки */
+  pointer-events: none; /* Чтобы цифра не мешала выделять текст */
+}
+
+
+.lesson-title {
+  font-size: 1.3rem;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.lesson-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.lesson-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.lesson-btn:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,252 @@
+/* Базовая изолированная структура для страниц одиночных уроков */
+.single-lesson-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0b0b1e;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.single-lesson-body * {
+  box-sizing: border-box;
+}
+
+/* Главный контейнер: делит экран на две колонки */
+.lesson-page-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 140px 20px 60px; /* Отступ сверху под шапку сайта */
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Левая колонка чуть шире под текст */
+  gap: 50px;
+  align-items: start;
+}
+
+/* --- ЛЕВАЯ ЧАСТЬ: ТЕОРИЯ --- */
+.lesson-theory {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Кнопка возврата на общую страницу */
+.back-to-lessons {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+  display: inline-block;
+  width: fit-content;
+}
+
+.back-to-lessons:hover {
+  color: #a855f7;
+}
+
+/* Розовый бейдж с номером текущего урока */
+.lesson-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ec4899;
+  margin-bottom: 8px;
+}
+
+.theory-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+}
+
+/* Оформление текста статьи */
+.theory-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.theory-content h3 {
+  font-size: 1.4rem;
+  margin: 40px 0 20px 0;
+  color: #ffffff;
+}
+
+/* Фиолетовая плашка с важным фактом */
+.theory-alert {
+  background: rgba(168, 85, 247, 0.05);
+  border-left: 4px solid #a855f7;
+  padding: 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 30px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.theory-alert strong {
+  color: #a855f7;
+}
+
+/* Список особенностей курса */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #cbd5e1;
+}
+
+/* Нижние навигационные кнопки урока */
+.lesson-navigation-btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-primary, .btn-secondary {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* --- ПРАВАЯ ЧАСТЬ: ЧИСТЫЙ ИНТЕРАКТИВ --- */
+.lesson-visual {
+  position: sticky; /* Панель аккуратно липнет при скролле теории */
+  top: 140px;
+}
+
+/* Стеклянный контейнер без уродливой рамки */
+.glass-terminal {
+  background: rgba(255, 255, 255, 0.02);
+  border: none;
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-body {
+  padding: 35px 30px;
+}
+
+/* Мягкие неоновые комментарии-подсказки */
+.comment {
+  font-family: monospace;
+  color: #4ade80;
+  margin: 0;
+  font-size: 0.85rem;
+  display: block;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Чистые отступы для вывода элементов без лишних рамок */
+.preview-html-only,
+.preview-css-applied {
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.preview-css-applied {
+  padding-bottom: 10px; /* У нижнего блока отступ меньше к краю */
+}
+
+/* Внутренние стили элементов ДО (Голый HTML) */
+.preview-html-only h1 {
+  all: revert; /* Полный сброс стилей сайта до дефолтных браузерных */
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.preview-html-only button {
+  all: revert;
+}
+
+/* Внутренние стили элементов ПОСЛЕ (С примененным кастомным CSS) */
+.preview-css-applied .glow-text {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.preview-css-applied .neon-btn {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+  transition: transform 0.2s;
+}
+
+.preview-css-applied .neon-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Кастомное выделение текста для этой страницы */
+::selection {
+  background-color: rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+}
+
+/* Адаптивная верстка под планшеты и мобильные экраны */
+@media (max-width: 968px) {
+  .lesson-page-container {
+    grid-template-columns: 1fr; /* Перестраиваем макет в один столбец */
+    gap: 40px;
+    padding-top: 110px;
+  }
+
+  .lesson-visual {
+    position: static;
+  }
+}
