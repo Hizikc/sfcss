@@ -1,0 +1,18 @@
+
+
+
+
+/* Цвет выделения на сайте */
+::section {
+ background-color: #a855f766;
+color:#ffffff
+}
+/* Фикс для браузеров на старых движках (на всякий случай) */
+::-moz-selection {
+  background-color: #a855f766;
+  color: #ffffff;
+}
+html, body {
+    /* градиент для фона */
+    background: radial-gradient(circle at center, #6366f1 0%, #000000 125%) !important; /* Первый цвет в центре второй с краёв */
+}
