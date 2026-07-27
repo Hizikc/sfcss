@@ -1,0 +1,66 @@
+/* Главное */
+.hero {
+    display: flex;
+    justify-content: center;    /* Выравниваение по горизонтали */
+    align-items: center;    /* Выравнивание по вертикали */
+    text-align: center;     /* Центрируем текст в h1 и p */
+
+    min-height: calc(100vh - 80px);     /* Растягиваем на весь экран за вычетом высоты шапки */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+/* Обертка для контента (Элементы в столбик) */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Центрируем кнопки и текст по оси */
+    max-width: 800px;   /* Ограничиваем ширину, чтобы текст не расползался */
+}
+/* Заголовок */
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+/* Пустой тег p на будущее (чтобы не ломал отступы) */
+.hero-subtitle {
+    margin: 0;
+    padding: 0;
+}
+/* Контейнер для кнопок */
+.hero-button {
+    display: flex;
+    gap: 15px;  /* Промижуток между кнопками */
+    justify-content: center;
+    margin-top: 15px;
+}
+/* Базовый класс для кнопок */
+.brh {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+/* Кнопка */
+.brh-primary {
+    background-color: #a89efd;
+    color: #ffffff;
+}
+.brh-primary:hover {
+    background-color: #a89efd;
+    transform: translateY(-2px);
+}
+/* Прозрачная кнопка-контур */
+.bth-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px sloid #8A2BE2;
+}
+.bth-secondary:hover {
+    background-color: #8a2be21a;
+    transform: translateY(-2px);
+}
